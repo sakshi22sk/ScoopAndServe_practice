@@ -1,0 +1,63 @@
+﻿
+@* Specifies that this view works with one IceCream object. *@
+@model ScoopAndServe2.Models.IceCream
+
+@*asp- Tag Helpers connect the HTML to ASP.NET Core MVC features.*@
+@{
+    // Sets the page title displayed in the browser tab.
+    ViewData["Title"] = "Add Ice Cream";
+}
+
+@* Displays the main heading. *@
+<h1>Add New Ice Cream 🍦</h1>
+
+@* Displays a short description below the heading. *@
+<p class="text-muted">Enter the details of your new ice cream.</p>
+
+@* Sends the entered values to the controller's Create POST action. *@
+<form asp-controller="IceCream" asp-action="Create" method="post">
+
+    @* Displays any model-level validation errors. *@
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    @* Ice cream name field. *@
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Ice Cream Name</label>
+        <input asp-for="Name" class="form-control"
+               placeholder="Enter ice cream name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    @* Ice cream price field. *@
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label">Price (₹)</label>
+        <input asp-for="Price" type="number" step="0.01"
+               class="form-control" placeholder="Enter price" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    @* Ice cream category field. *@
+    <div class="mb-3">
+        <label asp-for="Category" class="form-label">Category</label>
+        <input asp-for="Category" class="form-control"
+               placeholder="e.g., Chocolate, Fruit, Classic" />
+        <span asp-validation-for="Category" class="text-danger"></span>
+    </div>
+
+    @* Checkbox for whether this ice cream is available for sale. *@
+    <div class="form-check mb-3">
+        <input asp-for="IsAvailable" class="form-check-input" />
+        <label asp-for="IsAvailable" class="form-check-label">
+            Available for sale
+        </label>
+    </div>
+
+    @* Submits the form to the controller. *@
+    <button type="submit" class="btn btn-primary">Add Ice Cream</button>
+
+    @* Returns the user to the ice cream menu without submitting. *@
+    <a asp-controller="IceCream" asp-action="Index"
+       class="btn btn-secondary">Cancel</a>
+
+</form>
+```
