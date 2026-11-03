@@ -1,0 +1,42 @@
+#To stop EditorConfig from searching parent directories for additional configuration
+root = true
+
+[*.cs]                    #Select all matching C# files.
+charset = utf-8           #Require those files to use UTF-8 encoding.
+end_of_line = crlf        #CR=\r , LF=\n, new lines in windows and Linux,macOS (2 dev in one proj)
+
+insert_final_newline = true       #Every matching C# file should end with a newline character.
+indent_style = space              #Use spaces for indentation.
+indent_size= 4
+csharp_new_line_before_open_brace = all
+
+# Define a naming rule for public members
+#severity = warning: Report a naming violation as a warning.
+#symbols = public_members: Apply the rule to a group called public_members.
+#style = pascal_case: Require PascalCase naming.
+dotnet_naming_rule.public_members_pascal_case.severity = warning
+dotnet_naming_rule.public_members_pascal_case.symbols = public_members
+dotnet_naming_rule.public_members_pascal_case.style = pascal_case
+# Identify which C# elements the naming rule applies to
+dotnet_naming_symbols.public_members.applicable_kinds = property, method
+dotnet_naming_symbols.public_members.applicable_accessibilities = public
+dotnet_naming_style.pascal_case.capitalization = pascal_case    #tells EditorConfig exactly which capitalization style our existing public-member rule requires.
+
+
+#naming rule is now fully connected:
+#1. Naming rule: Public members must follow a specified naming style.
+#2. Symbol group: The rule applies to public methods and properties.
+#3. Naming style: The required format is PascalCase.
+
+
+#Purpose: Encourages using var when the compiler can clearly infer the variable's type, keeping C# code concise and readable.
+csharp_style_var_when_type_is_apparent = true:suggestion
+#Purpose: Encourages file-scoped namespace declarations to reduce unnecessary indentation and improve readability.
+csharp_style_namespace_declarations = file_scoped:suggestion
+
+
+#Purpose: Tells the C# analyzer to report unnecessary "using" directives as warnings.
+dotnet_diagnostic.IDE0005.severity = warning
+
+# Sets the default severity of .NET analyzer diagnostics to warning unless a more specific rule overrides it.	
+dotnet_analyzer_diagnostic.severity = warning

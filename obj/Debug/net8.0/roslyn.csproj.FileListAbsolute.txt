@@ -1,0 +1,14 @@
+D:\C#_practice\Roslyn_errors\roslyn\bin\Debug\net8.0\roslyn.exe
+D:\C#_practice\Roslyn_errors\roslyn\bin\Debug\net8.0\roslyn.deps.json
+D:\C#_practice\Roslyn_errors\roslyn\bin\Debug\net8.0\roslyn.runtimeconfig.json
+D:\C#_practice\Roslyn_errors\roslyn\bin\Debug\net8.0\roslyn.dll
+D:\C#_practice\Roslyn_errors\roslyn\bin\Debug\net8.0\roslyn.pdb
+D:\C#_practice\Roslyn_errors\roslyn\obj\Debug\net8.0\roslyn.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#_practice\Roslyn_errors\roslyn\obj\Debug\net8.0\roslyn.AssemblyInfoInputs.cache
+D:\C#_practice\Roslyn_errors\roslyn\obj\Debug\net8.0\roslyn.AssemblyInfo.cs
+D:\C#_practice\Roslyn_errors\roslyn\obj\Debug\net8.0\roslyn.csproj.CoreCompileInputs.cache
+D:\C#_practice\Roslyn_errors\roslyn\obj\Debug\net8.0\roslyn.dll
+D:\C#_practice\Roslyn_errors\roslyn\obj\Debug\net8.0\refint\roslyn.dll
+D:\C#_practice\Roslyn_errors\roslyn\obj\Debug\net8.0\roslyn.pdb
+D:\C#_practice\Roslyn_errors\roslyn\obj\Debug\net8.0\roslyn.genruntimeconfig.cache
+D:\C#_practice\Roslyn_errors\roslyn\obj\Debug\net8.0\ref\roslyn.dll
